@@ -9,6 +9,7 @@ import { SvgIconComponent } from '../../../ui/icons'
 import { svgPlus } from '../../../ui/icons/svg'
 import { ConfirmDialogComponent, LayoutModule, ModalService, PromptDialogComponent } from '../../../ui/layout'
 import { CharacterAvatarComponent } from '../../../widgets/character'
+import { LedgerImportComponent } from './ledger-import/ledger-import.component'
 
 export type FactionOption = {
   value: CharacterRecord['faction']
@@ -37,7 +38,7 @@ const FACTION_OPTIONS: Array<FactionOption> = [
 @Component({
   selector: 'nwb-bio-page',
   templateUrl: './bio.component.html',
-  imports: [NwModule, CharacterAvatarComponent, SvgIconComponent, FormsModule, LayoutModule],
+  imports: [NwModule, CharacterAvatarComponent, SvgIconComponent, FormsModule, LayoutModule, LedgerImportComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     class: 'ion-page',
